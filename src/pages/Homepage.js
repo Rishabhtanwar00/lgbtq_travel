@@ -112,7 +112,7 @@ const Homepage = () => {
 	const onValueChange = (event) => {
 		var value = document.getElementById('options').value;
 		for (var i = 0; i < videoArr.length; i++) {
-			if (i != value) {
+			if (i !== parseInt(value)) {
 				videoRef.current[i].pause();
 			} else {
 				videoRef.current[i].play();
