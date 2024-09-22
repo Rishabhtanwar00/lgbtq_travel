@@ -1,25 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter } from 'react-router-dom';
+// import Navbar from './components/Navbar';
+import RoutesContainer from './components/RoutesContainer';
+import { useEffect } from 'react';
+// import Footer from './components/Footer';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	useEffect(() => {
+		const body = document.querySelector('body');
+
+		setTimeout(() => {
+			body.style.overflowY = 'visible';
+		}, 7000);
+	});
+	return (
+		<div className='App'>
+			<BrowserRouter>
+				{/* <Navbar /> */}
+				<RoutesContainer />
+				{/* <Footer /> */}
+			</BrowserRouter>
+		</div>
+	);
 }
 
 export default App;
