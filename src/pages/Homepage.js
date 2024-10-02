@@ -1,6 +1,6 @@
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import video1 from '../assets/lesbian.mp4';
 import video2 from '../assets/gay.mp4';
 import video3 from '../assets/bisexual.mp4';
