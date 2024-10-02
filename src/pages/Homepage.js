@@ -6,6 +6,7 @@ import video2 from '../assets/gay.mp4';
 import video3 from '../assets/bisexual.mp4';
 import video4 from '../assets/transgender.mp4';
 import LandingImg from '../assets/landing.png';
+// import FlagImg from '../assets/flag.png';
 
 const Homepage = () => {
 	const videoArr = [
@@ -44,7 +45,7 @@ const Homepage = () => {
 	const timeline2 = gsap.timeline({
 		ease: 'power3.out',
 		scrub: 2,
-		delay: 10,
+		delay: 9.5,
 	});
 	useGSAP(() => {
 		timeline
@@ -53,9 +54,9 @@ const Homepage = () => {
 				duration: 1.3,
 				ease: 'power3.out',
 			})
-			.to('.home-landing', {
-				background: '#000',
-			})
+			// .to('.home-landing', {
+			// 	background: '#000',
+			// })
 			.to('.landing-img', {
 				bottom: 0,
 				duration: 1,
@@ -115,7 +116,18 @@ const Homepage = () => {
 					duration: 1,
 				},
 				'a4'
-			);
+			)
+			// .fromTo(
+			// 	'.flag',
+			// 	{
+			// 		width: 0,
+			// 	},
+			// 	{
+			// 		width: '200px',
+			// 		ease: 'power3.out',
+			// 		duration: 1,
+			// 	},
+			// );
 	});
 
 	const handleRadioChange = (index) => {
@@ -153,8 +165,10 @@ const Homepage = () => {
 					<span className='text-span'>Welcome</span>
 					<span className='text-span'> to</span>
 					<span className='text-span'> the</span>
+					<br />
 					<span className='text-span'> world</span>
 					<span className='text-span'> of</span>
+					<br />
 					<span className='text-span'> LGBTQ</span>
 				</h1>
 				<img className='landing-img' src={LandingImg} alt='' />
@@ -192,6 +206,7 @@ const Homepage = () => {
 					))}
 				</div>
 				<button className='button'>Enter</button>
+				{/* <img className='flag' src={FlagImg} alt="" /> */}
 			</div>
 		</section>
 	);
